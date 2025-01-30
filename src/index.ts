@@ -9,8 +9,8 @@ app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
 
-app.use("/api", basic);
-
+//routes
+app.use("/", basic);
 app.get("/test", (_req: Request, res: Response) => {
   res.json({ message: "Test successful" });
 });
